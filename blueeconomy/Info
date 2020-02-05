@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #C30000;
+}
+
+.active {
+  background-color: red;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+  @media screen and (max-width: 480px) {
+  .div text {
+    width: 100%;
+    display: block;
+  }
+}
+
+}
+body {
+  background-image: url('2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.text{
+  background-color:0;
+  width: 1100px;
+  border: 8px solid black;
+  padding: 50px;
+  margin: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  float: center;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="map.html"><i class="fa fa-fw fa-map"></i> Map</a> 
+  <a href="gallery.html"><i class="fa fa-fw fa-image"></i> Images</a>
+  <a class="active" href="info.html"><i class="fa fa-fw fa-info"></i> Info</a> 
+  <a style="float:right" href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+</div>
+
+<center><strong><div class="text" align="center">
+  <h1>BLUE ECONOMY</h1>
+  <p style="font: size 17px">
+    The ‘Blue Economy’ is an emerging concept which encourages better stewardship of our ocean or ‘blue’ resources. It underpins the thinking behind the Commonwealth Blue Charter, highlighting in particular the close linkages between the ocean, climate change, and the wellbeing of the people of the Commonwealth. At its heart, it reaffirms the values of the Commonwealth, including equity and public participation in marine and coastal decision-making.  It supports all of the United Nations’ Sustainable Development Goals (SDGs), especially SDG14 ‘life below water’, and recognises that this will require ambitious, co-ordinated actions to sustainably manage, protect and preserve our ocean now, for the sake of present and future generations. The blue economy goes beyond viewing the ocean economy solely as a mechanism for economic growth. In the ‘business-as-usual’ model, large-scale industrial nations have seen the development of their ocean economies through the exploitation of maritime and marine resources – for example through shipping, commercial fishing, and the oil, gas, minerals and mining industries - often without a view to the effects their activities have on the future health or productivity of those same resources. Small island states, relative to their land mass, have vast ocean resources at their disposal – presenting a huge opportunity for boosting their economic growth and to tackle unemployment, food security and poverty. They also have the most to lose from the degradation of marine resources. Similar to the ‘Green Economy’, the blue economy model aims for improvement of human wellbeing and social equity, while significantly reducing environmental risks and ecological scarcities. It provides for an inclusive model in which coastal states - which sometimes lack the capacity to manage their rich ocean resources - can begin to extend the benefit of those resources to all. Realising the full potential of the blue economy means inclusion and participation of all affected social groups and sectors. The blue economy is not just about market opportunities; it also provides for the protection and development of more intangible ‘blue’ resources such as traditional ways of life, carbon sequestration, and coastal resilience to help vulnerable states mitigate the often devastating effects of climate change. Secretary-General Patricia Scotland: “The Blue Charter will help countries develop an integrated approach to the building of the blue economy, one which considers the value of often overlooked sectors such as artisanal fishing as well as the role of women and young people”.
+  </p>
+  <h1>Summary of Progress</h1>
+  <p style="font: size 17px">
+    Since the endorsement of the PROBLUE AWP in February 2019, the Secretariat has focused on the operationalization of the trust fund, including the development of the operations manual and standard procedures, recruitment, outreach with colleagues to generate demand for PROBLUE support, and development partners communication. Although proposal submissions and acceptance are expected to accelerate over the course of the calendar year, in the four months between the adoption of the work plan and the end of fiscal 2019, the PROBLUE Secretariat received 14 proposals, with requests totaling over US$6 million. In that same period, six were accepted, for a total of over US$2 million. The remaining eight proposals were in the process of being revised and improved, with coordination between the Secretariat and individual teams. By the end of fiscal 2019, all proposals accepted were for global analytical and advisory services products, which was in alignment with the priorities of the February 2019 AWP, which focused on agenda-setting analytical work to build foundations for future operations in the Blue Economy. Other proposals, including knowledge products and project preparation grants, have been received, and discussions and outreach with teams across the World Bank are well under way to identify and support future activities to be funded in fiscal 2020. The PROBLUE Secretariat entered fiscal 2020 with discussions with over 30 teams across the World Bank regarding activities across all four pillars.
+  </p>
+  <h1>Marine Litter and Pollution Management</h1>
+  <p style="font: size 17px">
+    The objective of PROBLUE’s second pillar is to prevent and reduce marine litter and pollution. Pillar 2 encompasses plastics and the circular economy, issues that have attracted increased attention from policy makers over the last few years. Pillar 2 has four components: (1) creating foundations for marine litter and pollution operations; (2) country-level project identification and preparation/implementation support for marine litter prevention and management; (3) country-level project identification and preparation/implementation support for marine pollution prevention and management; and (4) investments in marine litter and pollution management. As presented in the February 2019 AWP, Pillar 2 is prioritizing activities designed to prevent marine pollution and marine plastics in particular: first, targeting improved solid waste management and developing circular economy and upstream reduction of plastics; second, preventing multiple sources of pollution in enclosed ecosystems where sources are intertwined; and third, prevention of marine plastics pollution and improving solid waste management in ports and maritime transport. Pillar 2’s initial work program is organized around a set of priority areas at the global, regional, and country levels. This includes the development of tools that will support decision making in countries both by facilitating the identification and sequencing of investments and policy reforms and by better understanding and quantifying the costs of pollution beyond plastics. Further work includes the creation of and participation in platforms and partnerships that address plastics in areas where demand for remedial actions is high; work in support of innovation and behavior change tailored to country and sector contexts; analytical products that increase country-level impacts by improving understanding of the plastic landscape from its production to plastic leakages; and finally work that accelerates the development of cost effective quick-win operations. Awareness-raising work under Pillar 2 has supported World Bank Group corporate initiatives to tackle the marine plastics problem. The World Bank Group launched the Marine Plastics Working Group and has created an IDA Marine Litter Initiative to provide supplemental IDA allocations in situations of urgent need. The February 2019 AWP allowed spending of as much as US$12.5 million for work related to plastics, US$1.5 million for marine pollution management, and US$1.0 million for marine pollution management specific to ports and transport, for a total of US$15.0 million. Since the AWP was approved, the PROBLUE Pillar 2 team has provided support and advice for about 20 country dialogues and regional engagements in East Asia, South Asia, Latin America, the Caribbean, North Africa, West Africa, and around the Black Sea. Several of these dialogues are cross-pillars and extend beyond Pillar 2 activities. Some of the dialogues between PROBLUE and teams are in preparation for additional country and regional upstream work that will help governments identify opportunities and propose the initial design of investments, whereas others are expected to support actual project preparation in fiscal 2020. Many of these dialogues are expected to turn into country and regional activities aimed at preventing marine plastic pollution and funded by PROBLUE in fiscal 2020.
+  </p>
+</div></strong></center>
+</body>
+
+</html>
