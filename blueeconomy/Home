@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #C30000;
+}
+
+.active {
+  background-color: red;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+  @media screen and (max-width: 480px) {
+  .img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .head {
+    width: 100%;
+  }
+}
+
+}
+body {
+  background-image: url('2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+img {
+  width:100%;
+  border: 5px solid #000000;
+  border-radius: 4px;
+  width: 15px;
+  position: absolute;
+  left: 200px;
+  top: 337px;
+}
+
+.text{
+  background-color: 0;
+  width: 650px;
+  border: 5px solid black;
+  padding: 50px;
+  margin: 20px;
+  position: absolute;
+  left: 950px;
+  top: 330px;
+  
+}
+
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="map.html"><i class="fa fa-fw fa-map"></i> Map</a> 
+  <a href="gallery.html"><i class="fa fa-fw fa-image"></i> Images</a>
+  <a href="info.html"><i class="fa fa-fw fa-info"></i> Info</a> 
+  <a style="float:right" href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+</div>
+<div style="padding:0 20px;"class="head">
+  <center><h1>BLUE ECONOMY</h1></center>
+  <br>
+  <center><h2>HEALTHY OCEANS • HEALTHY ECONOMIES • HEALTHY COMMUNITIES</h2></center>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="img">
+<img src="5.jpg" style="width:650px;height:375px;";>
+</div>
+<div class="text">
+<strong><h2 align="center">Water is a basic human need.</h2>
+<p align="left">Without it, survival is not possible. Yet, in 2019, more than 1 billion people still wake up each morning without access to clean water. This means that millions of vulnerable families around the world do not drink, cook, or bathe with clean water — a basic natural resource that we too often take for granted.</p>
+<p align="left">For most rural schools and communities, access to clean water depends on outside NGOs (nonprofit organizations) purchasing or “giving” a well. However, there are millions of schools and communities that do not have access to nonprofit agencies or local government support. We must then ask ourselves: “How can we make water available for all?” Something must be done.</p>
+</strong>
+</div>
+</body>
+
+</html>
