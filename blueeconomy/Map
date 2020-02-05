@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #C30000;
+}
+
+.active {
+  background-color: red;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .div map {
+    width: 100%;
+    display: block;
+  }
+}
+
+body {
+  background-image: url('2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a class="active" href="map.html"><i class="fa fa-fw fa-map"></i> Map</a> 
+  <a href="gallery.html"><i class="fa fa-fw fa-image"></i> Images</a>
+  <a href="info.html"><i class="fa fa-fw fa-info"></i> Info</a> 
+  <a style="float:right" href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+</div>
+<strong><center><h1>This is where you can find Us.</h1><center></strong>
+<br>
+<div class="map">
+<center><p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.700091577872!2d27.399290815694997!3d42.45539683706779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a6eb874b69ce99%3A0xdcb3dcb30766d382!2z0J_RgNC-0YTQtdGB0LjQvtC90LDQu9C90LAg0LPQuNC80L3QsNC30LjRjyDQv9C-INC60L7QvNC_0Y7RgtGK0YDQvdC-INC_0YDQvtCz0YDQsNC80LjRgNCw0L3QtSDQuCDQuNC90L7QstCw0YbQuNC4!5e0!3m2!1sbg!2sbg!4v1579642610389!5m2!1sbg!2sbg" width="600" height="450" style="border:5px solid black " allowfullscreen=""></iframe></p></center>
+<div>
+</body>
+
+</html>
