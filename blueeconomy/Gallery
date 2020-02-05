@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #C30000;
+}
+
+.active {
+  background-color: red;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+body {
+  background-image: url('2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+div.gallery {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+div.gallery:hover {
+  border: 2px solid rgb(255, 0, 0);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {box-sizing: border-box;}
+
+.img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  vertical-align: right;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: rgb(243, 33, 33);
+  opacity: 0.7;
+  border-radius: 50%;
+}
+</style>
+
+<script>
+  function initComparisons() {
+    var x, i;
+    /*find all elements with an "overlay" class:*/
+    x = document.getElementsByClassName("img-comp-overlay");
+    for (i = 0; i < x.length; i++) {
+      /*once for each "overlay" element:
+      pass the "overlay" element as a parameter when executing the compareImages function:*/
+      compareImages(x[i]);
+    }
+    function compareImages(img) {
+      var slider, img, clicked = 0, w, h;
+      /*get the width and height of the img element*/
+      w = img.offsetWidth;
+      h = img.offsetHeight;
+      /*set the width of the img element to 50%:*/
+      img.style.width = (w / 2) + "px";
+      /*create slider:*/
+      slider = document.createElement("DIV");
+      slider.setAttribute("class", "img-comp-slider");
+      /*insert slider*/
+      img.parentElement.insertBefore(slider, img);
+      /*position the slider in the middle:*/
+      slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+      slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+      /*execute a function when the mouse button is pressed:*/
+      slider.addEventListener("mousedown", slideReady);
+      /*and another function when the mouse button is released:*/
+      window.addEventListener("mouseup", slideFinish);
+      /*or touched (for touch screens:*/
+      slider.addEventListener("touchstart", slideReady);
+      /*and released (for touch screens:*/
+      window.addEventListener("touchstop", slideFinish);
+      function slideReady(e) {
+        /*prevent any other actions that may occur when moving over the image:*/
+        e.preventDefault();
+        /*the slider is now clicked and ready to move:*/
+        clicked = 1;
+        /*execute a function when the slider is moved:*/
+        window.addEventListener("mousemove", slideMove);
+        window.addEventListener("touchmove", slideMove);
+      }
+      function slideFinish() {
+        /*the slider is no longer clicked:*/
+        clicked = 0;
+      }
+      function slideMove(e) {
+        var pos;
+        /*if the slider is no longer clicked, exit this function:*/
+        if (clicked == 0) return false;
+        /*get the cursor's x position:*/
+        pos = getCursorPos(e)
+        /*prevent the slider from being positioned outside the image:*/
+        if (pos < 0) pos = 0;
+        if (pos > w) pos = w;
+        /*execute a function that will resize the overlay image according to the cursor:*/
+        slide(pos);
+      }
+      function getCursorPos(e) {
+        var a, x = 0;
+        e = e || window.event;
+        /*get the x positions of the image:*/
+        a = img.getBoundingClientRect();
+        /*calculate the cursor's x coordinate, relative to the image:*/
+        x = e.pageX - a.left;
+        /*consider any page scrolling:*/
+        x = x - window.pageXOffset;
+        return x;
+      }
+      function slide(x) {
+        /*resize the image:*/
+        img.style.width = x + "px";
+        /*position the slider:*/
+        slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+<div class="navbar">
+  <a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="map.html"><i class="fa fa-fw fa-map"></i> Map</a> 
+  <a class="active" href="gallery.html"><i class="fa fa-fw fa-image"></i> Images</a>
+  <a href="info.html"><i class="fa fa-fw fa-info"></i> Info</a> 
+  <a style="float:right" href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+</div>
+<strong><h1>Blue economy gallery</h1>
+<h3 style="size:10px">Our unique gallery.</h3></strong>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="1.jpg">
+      <img src="1.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <strong><div class="desc">One of the beautiful places in the world, Greece.</div></strong>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="7.jpg">
+      <img src="7.jpg" alt="Forest" width="600" height="400">
+    </a>
+     <strong><div class="desc">This is the most amazing beach in Burgas, Perla.</div></strong>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="4.jpg">
+      <img src="4.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <strong><div class="desc">This is one beautiful beach after it was polluted.</div></strong>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="6.jpg">
+      <img src="6.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <strong><div class="desc">Beach before and after pollution</div></strong>
+  </div>
+</div>
+
+
+
+
+<div class="clearfix"></div>
+
+<br>
+
+<div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="11.jpg">
+        <img src="11.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <strong><div class="desc">Consequences of ocean pollution</div></strong>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="8.jpg">
+        <img src="8.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <strong><div class="desc">The magnificent maldives</div></strong>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="9.jpg">
+        <img src="9.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <strong><div class="desc">The magnificent maldives</div></strong>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="12.jpg">
+        <img src="12.jpg" alt="Mountains" width="600" height="400">
+      </a>
+      <strong><div class="desc">Amazing ocean sunrise</div></strong>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+<br>
+<br>
+  <div class="img-comp-container">
+    <div class="img-comp-img">
+      <img src="6,2.jpg" width="400" height="300">
+    </div>
+    <div class="img-comp-img img-comp-overlay">
+      <img src="6,1.jpg" width="400" height="300">
+    </div>
+  </div>
+  <script>
+  /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+  initComparisons();
+  </script>
+</body>
+
+</html>
